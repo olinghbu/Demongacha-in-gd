@@ -6,6 +6,9 @@ on:
     branches:
       - "**"
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Windows
@@ -21,3 +24,12 @@ jobs:
         with:
           name: DemonGacha-in-GD
           path: ${{ steps.build.outputs.build-output }}
+
+      - name: Publicar release con el .geode
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.0
+          name: DemonGacha in GD v1.0.0
+          body: "Descarga el archivo .geode y ponlo en Geometry Dash/geode/mods/"
+          files: ${{ steps.build.outputs.build-output }}/*.geode
