@@ -23,11 +23,11 @@ class $modify(DGMenuLayer, MenuLayer) {
             menu->updateLayout();
         } else {
             // Por si otro mod cambia el menú: lo ponemos abajo a la izquierda
-            auto menu = CCMenu::create();
-            menu->setID("demongacha-menu"_spr);
-            menu->setPosition({ 35.f, 35.f });
-            menu->addChild(btn);
-            this->addChild(menu);
+            auto ownMenu = CCMenu::create();
+            ownMenu->setID("demongacha-menu"_spr);
+            ownMenu->setPosition({ 35.f, 35.f });
+            ownMenu->addChild(btn);
+            this->addChild(ownMenu);
         }
         return true;
     }
