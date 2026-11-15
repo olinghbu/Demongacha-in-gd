@@ -1,0 +1,11 @@
+{
+	"geode": "6.0.0-alpha.2",
+	"gd": {
+		"win": "2.2091"
+	},
+	"id": "olinghbu.demongacha-in-gd",
+	"name": "DemonGacha in GD",
+	"version": "v1.0.0",
+	"developer": "olinghbu",
+	"description": "Botón en el menú principal para abrir demongacha.com"
+}
